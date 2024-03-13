@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color:rgb(121, 24, 124);
+    color:white; 
+    height: 50px;
+}
+
+nav ul{
+    list-style-type: none;
+}

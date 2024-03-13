@@ -1,0 +1,54 @@
+.all {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.all table {
+    flex: 0 0 30%;
+
+    margin: 10px;
+    border-collapse: collapse;
+    border: 2px solid white;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+    
+}
+h1{
+    color:black;
+    text-align:center;
+    text-decoration:underline;
+    font-weight:Bold;
+    font-family: arial;
+    font-size:96px;
+}
+th{
+    background-color: red;
+}
+body{
+    background-color: pink;
+}
+td{
+    background-color: black;
+    color:white;
+    border-color: azure;
+
+}
+h2{
+    color:black;
+    text-align:center;
+    font-weight:bold;
+    font-size: 50px;
+}
+button{
+    background-color: rgb(11, 11, 218);
+    color:white;
+     margin-left: 650px;
+    text-align:center;
+    border-radius: 5px;
+    font-size:16px;
+    padding:10px 20px;
+}

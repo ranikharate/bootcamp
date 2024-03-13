@@ -1,0 +1,77 @@
+1.
+<html>:- the root element that contains the entire html document
+<head>:- contains meta- information about the document such as title,charset,and linked stylesheet
+<title>:-Define the title of the html documents ,displyas in the browser title bar or tab
+<meta>:- provides metadata about the document,like character encoding and page description
+<link>:- links external resources,such as stylesheet or favicons,to the html documents
+<style>:-contains css code for styling the html document
+<script>:- embeds or references javascript code within the html documents
+<body>:- represents the main contain of the html documents displayed in the browser
+
+<h1toh6>:- heading from the largest (h1) to smallest (h6) used for structuring content
+
+<p>:- define a paragraph of text
+
+<a>:- create hyperlink to other web pages or resources
+
+<img>:- embeds image in the documents
+
+<ul>:- defines an unorderd(bulleted) list
+
+<ol>:- define an ordered (numbers) list
+
+<li>:-represented list items within <ul> or <ol> lists
+
+<div>:- A container used for grouping and styling elements
+
+<span>:- an inline container used for grouping and styling text or inline elements
+
+<table>:-defines a table structure to organize data
+
+<tr>:- represents table row within <table>
+
+<th>:- defins a tables header cell (typically in the first row)
+
+<td>:- represents standard table data cell
+
+<form>:- used to create form for user input
+ 
+<input>:- creates various form input fields (text,radio,buttons , checkboxes etc)
+
+<label>:- Associates a label with an <input> element
+
+<textarea>:- defines a multi-lines text input field
+
+<button>:- creates clickable button within a form
+
+<select>:- generates a dropdown list for selecting options
+
+<option>:- defines an option within <select> element
+
+<iframe>:- embeds an inline frame for displyaing external content
+
+<audio>:- embeds audio content with controls for playback 
+
+<video>:- embeds video content with playback controls
+
+<canvas>:- provides blank canvas for dynamic graphics using js
+
+<svg>:- embeds scalable vector graphics
+
+<footer>:-represnts the footer of documents  or section
+
+<header>:- defines the header section of documents or section
+
+<nav>:- marks a navigation menu or links within a documents
+
+<article>:- defins an independent self-contained piece of content
+
+<aside>:- used for content that is tangentially related to the surrounding content
+
+<address>:- represents contacts information ,typically for the author of the documents
+
+<hr>:- create thematic break or horizontal line in document
+
+<br>:- insert line break within text or content
+
+<map>:- contains image map coordinates and clickable areas

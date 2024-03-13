@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        body{
+            background-color: blue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container{
+            text-align: center;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+
+        .fir_h1{
+            background-color: rgb(255,255,255);
+            height: 70px;
+            text-align: center;
+            margin-top: 0;
+            border-radius: 20px;
+            padding-top: 20px;
+            box-shadow: 2px 10px 15px black;
+        }
+
+        .inp_box{
+            color: black;
+            border: 2px solid black;
+            background-color: rgb(255,255,255);
+            box-shadow: 2px 2px 15px black;
+            border-radius: 10px;
+            height: 40px;
+            display: flex;
+            font-size: 25px;
+            align-items: center;
+            padding: 5px;
+            width: 250px;
+            margin-top: 7px;
+            margin-left: 39px;
+        }
+
+        .birth_inp{
+                width: 25px;
+                margin: 3px;
+                background: none;
+                border: none;
+                font-size: 20px;
+        }
+        #year{
+            width:50px;
+        }
+         input::-webkit-outer-spin-button,
+         input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+         }
+        .label_enter{
+            font-size: 23px;
+            position: relative;
+            left: -60px;
+        }
+
+        .out_box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            margin: 10px;
+        }
+
+        .out_sp{
+            background: none;
+            width:50px;
+            text-align: center;
+            margin: 2px;
+            border-radius: 6px;
+            font-size: 20px;
+        }
+
+        .p_out{
+            font-size: 20px;
+            margin: 0 5px;
+        }
+
+        #sub_btn{
+            font-size: 25px;
+            margin-top: 4px;
+            margin-bottom: 15px;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: rgb(224,76,103);
+            font-weight: 600;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 150px;
+            transition-duration: 1s;
+        }
+
+        #sub_btn:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            <h1 class="fir_h1">Age Calculator</h1>
+            <div class="birthDate">
+                <label class="label_enter">Date of Birth</label>
+                <div class="inp_box">
+                    <input type="number" class="birth_inp" id="day" placeholder="dd">/
+                    <input type="number" class="birth_inp" id="month" placeholder="mm">/
+                    <input type="number" class="birth_inp" id="year" placeholder="yy">
+                </div>
+            </div>
+
+            <div class="out_box">
+                <span class="out_sp" id="sp_year">yyyy</span> <span class="p_out">Year</span>
+                <span class="out_sp" id="sp_month">mm</span> <span class="p_out">Month</span>
+                <span class="out_sp" id="sp_day">dd</span> <span class="p_out">Day</span>
+            </div>
+
+             <button id="sub_btn">Calculate</button>
+        </div>
+    </div>
+
+
+
+    <script>
+           document.getElementById('sub_btn').addEventListener('click',calculate);
+
+           // calculate function//
+           function calculate(){
+            //user input date
+            let y1 = document.getElementById('year').value
+            let m1 = document.getElementById('month').value
+            let d1 = document.getElementById('day').value
+            
+            // current Date
+            let y2 = new Date().getFullYear();
+            let m2 = new Date().getMonth()+1;
+            let d2 = new Date().getDate();
+        
+            // output box
+            let dayBox = document.getElementById('sp_day')
+            let monthBox = document.getElementById('sp_month')
+            let yearBox = document.getElementById('sp_year')
+            
+            
+            //calculation
+            var d; var m; var y;
+            let month = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+            if(y1 <= y2 && m1 <= 12 && d1 <= 31){
+
+              //main logic
+              if(d1 > d2){
+                d2 = d2 + month[m2 - 1];
+                m2 = m2 - 1 
+              }
+              if(m1 > m2){
+                m2 = m2 + 12;
+                y2 = y2 - 1;
+              }
+                   // value of d, m ,y
+              d = d2 - d1;
+              m = m2 - m1;
+              y = y2 - y1;
+              dayBox.textContent = d;
+              monthBox.textContent = m;
+              yearBox.textContent = y;
+            }
+            else{
+                let inputs = document.getElementsByClassName("birth_inp")
+                Array.from(inputs).forEach((e)=>{
+                      e.value = ""
+                })
+                alert('Please Enter Valid Date')
+           }
+        }
+    </script>
+</body>
+</html>
